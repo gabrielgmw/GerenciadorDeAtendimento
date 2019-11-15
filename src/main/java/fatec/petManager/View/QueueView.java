@@ -17,6 +17,7 @@ import java.awt.Color;
 public class QueueView extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField Next;
 
 	/**
 	 * Launch the application.
@@ -39,7 +40,7 @@ public class QueueView extends JFrame {
 	 */
 	public QueueView() {
 		setTitle("Gerenciador de Atendimento Animal - Exibição de Senhas");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -59,11 +60,13 @@ public class QueueView extends JFrame {
 		btnAnterior.setFont(new Font("Yu Gothic", Font.PLAIN, 26));
 		contentPane.add(btnAnterior, BorderLayout.WEST);
 		
-		JLabel lblFila = new JLabel("");
-		lblFila.setForeground(Color.RED);
-		lblFila.setHorizontalAlignment(SwingConstants.CENTER);
-		lblFila.setFont(new Font("Yu Gothic", Font.BOLD, 99));
-		contentPane.add(lblFila, BorderLayout.CENTER);
+		Next = new JTextField();
+		Next.setHorizontalAlignment(SwingConstants.CENTER);
+		Next.setForeground(Color.RED);
+		Next.setFont(new Font("Yu Gothic", Font.BOLD, 99));
+		Next.setEditable(false);
+		contentPane.add(Next, BorderLayout.CENTER);
+		Next.setColumns(10);
 	}
 
 }
