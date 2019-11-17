@@ -56,7 +56,7 @@ public class QueueView extends JFrame {
 		btnPrximo.setFont(new Font("Yu Gothic", Font.PLAIN, 26));
 		contentPane.add(btnPrximo, BorderLayout.EAST);
 		
-		JButton btnAnterior = new JButton("Anterior");
+		JButton btnAnterior = new JButton("Último");
 		btnAnterior.setFont(new Font("Yu Gothic", Font.PLAIN, 26));
 		contentPane.add(btnAnterior, BorderLayout.WEST);
 		

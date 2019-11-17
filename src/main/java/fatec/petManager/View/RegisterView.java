@@ -23,6 +23,7 @@ public class RegisterView extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+	private JTextField txtSenha;
 
 	/**
 	 * Launch the application.
@@ -107,7 +108,7 @@ public class RegisterView extends JFrame {
 				int peso = Integer.parseInt(pes);
 				int idade = Integer.parseInt(idad);
 				
-				System.out.println(nome + "; " + tipo + "; "+ peso + "; " + idade);
+					System.out.println(nome + "; " + tipo + "; "+ peso + "; " + idade);
 				
 				
 			}
@@ -131,6 +132,14 @@ public class RegisterView extends JFrame {
 		
 		JLabel lblInformacoesAnimal = new JLabel("Informações do Pet");
 		lblInformacoesAnimal.setFont(new Font("Yu Gothic", Font.BOLD | Font.ITALIC, 20));
+		
+		txtSenha = new JTextField();
+		txtSenha.setEditable(false);
+		txtSenha.setFont(new Font("Tahoma", Font.PLAIN, 35));
+		txtSenha.setColumns(10);
+		
+		JLabel lblSenha = new JLabel("Senha:");
+		lblSenha.setFont(new Font("Yu Gothic", Font.ITALIC, 20));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -178,7 +187,11 @@ public class RegisterView extends JFrame {
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(118)
 					.addComponent(btnInserir)
-					.addContainerGap(473, Short.MAX_VALUE))
+					.addPreferredGap(ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+					.addComponent(lblSenha, GroupLayout.PREFERRED_SIZE, 76, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(txtSenha, GroupLayout.PREFERRED_SIZE, 82, GroupLayout.PREFERRED_SIZE)
+					.addGap(227))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -210,8 +223,12 @@ public class RegisterView extends JFrame {
 						.addComponent(lbl_idade, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
 						.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, 29, GroupLayout.PREFERRED_SIZE))
 					.addGap(18)
-					.addComponent(btnInserir)
-					.addPreferredGap(ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addComponent(btnInserir)
+						.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+							.addComponent(lblSenha, GroupLayout.PREFERRED_SIZE, 33, GroupLayout.PREFERRED_SIZE)
+							.addComponent(txtSenha, GroupLayout.PREFERRED_SIZE, 72, GroupLayout.PREFERRED_SIZE)))
+					.addPreferredGap(ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
 					.addComponent(btnIniciarAtendimento)
 					.addContainerGap())
 		);

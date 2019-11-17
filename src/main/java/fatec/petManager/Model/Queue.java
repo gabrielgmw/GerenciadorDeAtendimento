@@ -1,13 +1,13 @@
 package fatec.petManager.Model;
 
-public class Queue {
-	int queuePosition;
+public interface Queue {
+	public int size();
 
-	public int getQueuePosition() {
-		return queuePosition;
-	}
+	public boolean isEmpty();
 
-	public void setQueuePosition(int queuePosition) {
-		this.queuePosition = queuePosition;
-	}
+	public void enqueue(Pet pet);
+
+	public Pet dequeue();
+
+	public Pet peek();
 }
