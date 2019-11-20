@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="GerenciadorPetMaster.jnlp">
+  <information>
+    <title>GerenciadorPetMaster</title>
+    <vendor>jonis.silva.neves</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="GerenciadorPetMaster.jar" size="10022" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="GerenciadorPetMaster" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="javafxapplication1.JavaFXApplication1"  name="GerenciadorPetMaster" />
+  <update check="always"/>
+</jnlp>
