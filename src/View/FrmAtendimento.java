@@ -107,17 +107,15 @@ public class FrmAtendimento extends javax.swing.JFrame {
 
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
         // TODO add your handling code here:
-        Fila filaAtendimento = new Fila(20);
-        if(rbtnClinica.isSelected()){
-            
-        }else if(rbtnFratura.isSelected()){
-            
-        }else if(rbtnVacinacao.isSelected()){
-            
-        }else if(rbtnCirurgia.isSelected()){
+        Fila filaAtendimento = new Fila();
+        
+        if(rbtnClinica.isSelected()||rbtnVacinacao.isSelected()){
             
         }
-        filaAtendimento.adicionaFila("N");
+        else if(rbtnFratura.isSelected()||rbtnCirurgia.isSelected()){
+            
+        }
+        
     }//GEN-LAST:event_btnInserirActionPerformed
 
     /**
