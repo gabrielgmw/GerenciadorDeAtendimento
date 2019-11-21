@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package View;
 
-/**
- *
- * @author jonis.silva.neves
- */
+import Model.Fila;
+
+
 public class FrmAtendimento extends javax.swing.JFrame {
 
     /**
@@ -45,6 +40,8 @@ public class FrmAtendimento extends javax.swing.JFrame {
         txtIdade = new javax.swing.JTextField();
         btnInserir = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        lblSenhaGerada = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
 
         jTextField1.setText("jTextField1");
 
@@ -88,14 +85,40 @@ public class FrmAtendimento extends javax.swing.JFrame {
         getContentPane().add(txtIdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, 270, -1));
 
         btnInserir.setText("Inserir na Fila");
+        btnInserir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInserirActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnInserir, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setText("Tipo de Atendimento");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, -1, -1));
 
+        lblSenhaGerada.setText("Senha Gerada: ");
+        getContentPane().add(lblSenhaGerada, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 310, -1, -1));
+
+        jTextField2.setEnabled(false);
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 100, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
+        // TODO add your handling code here:
+        Fila filaAtendimento = new Fila(20);
+        if(rbtnClinica.isSelected()){
+            
+        }else if(rbtnFratura.isSelected()){
+            
+        }else if(rbtnVacinacao.isSelected()){
+            
+        }else if(rbtnCirurgia.isSelected()){
+            
+        }
+        filaAtendimento.adicionaFila("N");
+    }//GEN-LAST:event_btnInserirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,6 +166,8 @@ public class FrmAtendimento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel lblSenhaGerada;
     private javax.swing.JRadioButton rbtnCirurgia;
     private javax.swing.JRadioButton rbtnClinica;
     private javax.swing.JRadioButton rbtnFratura;
